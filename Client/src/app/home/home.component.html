@@ -1,0 +1,11 @@
+<label>Datum</label><br>
+<label>Tijd</label>
+<div id="rechts" *ngIf="naam != ''">
+  <label>{{date | date: 'd/M/yyyy'}}</label><br>
+  <label>{{date | date: 'h:mm'}}</label><br>
+</div>
+<div>
+  <label>Naam</label><input type="text" [(ngModel)]="naam" (ngModelChange)="saveData()"><br>
+  <label>e-mail</label><input type="text" [(ngModel)]="email" value="{{email}}" (input)="checkEmail($event.target.value)"><br>
+</div>
+<div *ngIf="!emailCheck"><p>Vul een juist email adres in aub.</p></div>

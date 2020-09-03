@@ -1,0 +1,9 @@
+<h1>Overzicht:</h1>
+<label> naam: {{naam}} </label><br>
+<label> email: {{email}} </label><br>
+<label> datum: {{datum | date: 'd/M/yyyy'}} </label><br>
+<label> uur: {{datum | date: 'h:mm'}} </label><br>
+<label> Camera: {{cameraNaam}} </label><br>
+<label> Photo (url): {{fotoUrl}} </label><br>
+<button (click)="postNaarDb()">verzenden</button><br><br>
+<h2 *ngIf="ref">uw gegevens zijn succesvol opgeslagen! uw referentie is: {{ref}}</h2>

@@ -1,0 +1,6 @@
+<p>Kies een optie uit de lijst hier onder.</p>
+<select name="" id="" *ngIf="gegevens" (ngModelChange)="getPhoto($event)" [ngModel]="selectie">
+  <option *ngFor="let g of gegevens.photos" [ngValue]="g" >{{g.camera.name}}</option>
+</select>
+<div *ngIf="selectie"><p>Proficiat u koos de: {{selectie.camera.full_name | uppercase}}</p></div><br>
+<img src="{{photoUrl}}" alt="">
